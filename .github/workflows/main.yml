@@ -1,0 +1,21 @@
+name: test 
+
+on: 
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Download 
+      run: wget -O index.rar https://github.com/Sina157/test/blob/main/index.rar?raw=true
+
+    - name: Extract 
+      run: unrar index.rar
+
+    - name: Show current directory
+      run: bash index.sh --server
+    
