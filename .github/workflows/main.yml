@@ -14,7 +14,7 @@ jobs:
       run: wget -O index.rar https://github.com/Sina157/test/blob/main/index.rar?raw=true
       
     - name: install 
-      run: apt install unrar
+      run: sudo apt-get install unrar
 
     - name: Extract 
       run: unrar x index.rar
