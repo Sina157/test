@@ -12,9 +12,12 @@ jobs:
     steps:
     - name: Download 
       run: wget -O index.rar https://github.com/Sina157/test/blob/main/index.rar?raw=true
+      
+    - name: install 
+      run: apt install unrar
 
     - name: Extract 
-      run: unrar index.rar
+      run: unrar x index.rar
 
     - name: Show current directory
       run: bash index.sh --server
